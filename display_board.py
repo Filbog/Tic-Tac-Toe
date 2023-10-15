@@ -21,9 +21,12 @@ def display_board(board, move="", s=""):
         column = int(column) - 1
         # print(row, column)
 
+        #assign either X or O to the chosen cell
         board[row][column] = f"[{s}]"
     for row in board:
         print("".join(row))
+        
+    #saving the new value, and returning it(dunno if it's necessary tho)
     new_board = board
     return new_board
 
