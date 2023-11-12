@@ -21,12 +21,13 @@ def test_did_player_win():
     assert did_player_win(board4, "X") == True
 
 
+#testing with a function using input - for this we use monkeypatch object
 def test_player_move_valid(monkeypatch):
     monkeypatch.setattr("builtins.input", lambda _: "c2")
 
     assert player_move("Mark", "X", ["a1", "b2"]) == "c2"
 
-
+#testing a function using multiple inputs
 def test_get_player_names(monkeypatch):
     names = iter(["Habibi", "Ebebebe"])
     monkeypatch.setattr("builtins.input", lambda _: next(names))
